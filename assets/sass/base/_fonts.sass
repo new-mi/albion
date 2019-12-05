@@ -1,0 +1,72 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+	@font-face
+		font-family: $font-family
+		font-weight: $weight
+		font-style: $style
+
+		@if $asset-pipeline == true
+			src: font-url('#{$file-path}.eot')
+			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.woff2') format('woff2'), font-url('#{$file-path}.ttf') format('truetype')
+		@else
+			src: url('#{$file-path}.eot')
+			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.ttf') format('truetype')
+
+
++font-face("OpenSans", "../fonts/OpenSans-Regular", 400)
++font-face("OpenSans", "../fonts/OpenSans-SemiBold", 700)
+
+//SIZE
+.f--h1
+	font-family: "OpenSans", sans-serif
+	font-size: 48px
+	font-weight: 700
+	text-decoration: none
+	color: inherit
+.f--h2
+	font-family: "OpenSans", sans-serif
+	font-size: 30px
+	font-weight: 700
+	text-decoration: none
+	color: inherit
+.f--h3
+	font-family: "OpenSans", sans-serif
+	font-size: 28px
+	font-weight: 700
+	text-decoration: none
+	color: inherit
+.f--h4
+	font-family: "OpenSans", sans-serif
+	font-size: 20px
+	font-weight: 700
+	text-decoration: none
+	color: inherit
+.f--h5
+	font-family: "OpenSans", sans-serif
+	font-size: 18px
+	font-weight: 700
+	text-decoration: none
+	color: inherit
+.f--text--s
+	font-family: "OpenSans", sans-serif
+	font-size: 14px
+	font-weight: 300
+	text-decoration: none
+	color: inherit
+.f--text
+	font-family: "OpenSans", sans-serif
+	font-size: 16px
+	font-weight: 400
+	text-decoration: none
+	color: inherit
+.f--text--l
+	font-family: "OpenSans", sans-serif
+	font-size: 18px
+	font-weight: 400
+	text-decoration: none
+	color: inherit
+
+//WEIGHT
+.f--normal
+	font-weight: 400
+.f--bold
+	font-weight: 700

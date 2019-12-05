@@ -1,0 +1,565 @@
+@import "base/_vars"
+@import "base/_clear"
+@import "base/_fonts"
+
+::selection
+  background-color: $c_accent
+  color: $c_white
+
+html
+  font-size: $base-font-size
+  font-weight: $base-line-height
+  font-family: $base-font-family
+  height: 100%
+
+body
+  position: relative
+  min-width: 320px
+  height: 100%
+  overflow-x: hidden
+
+a
+  color: inherit
+
+.page
+  display: flex
+  flex-direction: column
+  height: 100%
+  &__header
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 20
+  &__content
+    margin-top: 162px
+    flex-grow: 1
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: 0.02
+      background-image: url('../img/pat-2.jpg')
+      background-size: 400px
+  &__footer
+    position: relative
+    padding-top: 20px
+    background: linear-gradient(to bottom, rgba($c_accent,0), rgba($c_accent,1))
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: 0.2
+      background-image: url('../img/rye.jpeg')
+
+.container
+  max-width: 100%
+  width: 1440px
+  margin: 0 auto
+  padding: 0 $gutter
+
+//logo
+.logo
+  width: 120px
+  height: auto
+  img
+    width: 100%
+    height: auto
+
+// header
+.header
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  padding: 10px 0 0
+  background: $c_white
+  box-shadow: 0px 5px 3px -3px rgba(0,0,0,0.07)
+  &__el
+    &--logo
+      margin: 0 10px 0 0
+    &--menu
+      width: 100%
+      // border-bottom: 1px solid rgba($c_grey, 0.1)
+      border-top: 1px solid rgba($c_grey, 0.1)
+    &--contacts
+      margin-left: auto
+
+// navbar
+.navbar
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  &__el
+    padding: 10px
+    transition: background $trans
+    // &:hover
+    //   background: $c_accent
+
+//contacts
+.contacts
+  display: flex
+  align-items: flex-start
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+  &__el
+    padding: 0 10px
+    &--adr
+      max-width: 200px
+  &__title
+    margin-bottom: 5px
+  &__link
+    padding: 0 0 7px
+    span
+      padding: 0 5px
+      font-size: 14px
+
+//section
+.section
+  position: relative
+  padding: 40px 0
+  &--first
+    padding: 0 0 10px
+  &--min-top
+    padding: 10px 0 40px
+
+//anchor
+.anchor
+  position: absolute
+  opacity: 0
+  left: 0
+  top: -160px
+
+//block
+.block
+  &--main
+    display: flex
+  .block
+    &__el
+      &--slider
+        width: 50%
+      &--content-special
+        width: 30%
+      &--content-price
+        width: 20%
+  &--main-second
+    display: flex
+    .block
+      &__el
+        &--advantages
+          width: 55%
+          padding-right: 10px
+        &--products
+          width: 45%
+          padding-left: 10px
+
+//main-slider
+.main-slider
+  position: relative
+  &__el
+    width: 100%
+    height: 400px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+  &__box
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    padding: 20px 40px
+    background: rgba($c_black, 0.8)
+    color: white
+    text-align: center
+    z-index: 1
+
+//special-offers
+.special-offers
+  padding: 20px
+  background: $c_accent
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  &__title
+    background: red
+    color: white
+    padding: 10px 20px
+    width: calc(100% + 40px)
+    margin: 0 -20px
+  &__list
+    padding: 10px 0
+    &-item
+      padding: 5px 0
+      b
+        display: block
+        font-size: 18px
+  &__subtitle
+    padding: 5px 0
+
+//price-list
+.price-list
+  padding: 20px
+  border-bottom: 1px solid $c_accent
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  &__link
+    display: flex
+    align-items: flex-start
+    padding: 5px 0
+    transition: color $trans
+    i
+      margin-right: 10px
+    // &:hover
+    //   color: $c_accent
+
+//advantages
+.advantages
+  &__el
+    padding: 20px
+    &:first-child
+      padding-top: 0
+    &--bg-orange
+      background: $c_accent
+      margin: 20px 0
+    &--v-clear
+      padding: 0 20px
+  &__cards
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+  &__card
+    display: flex
+    align-items: center
+    width: 100%
+    padding: 10px 0
+  &__icon
+    // margin-bottom: 10px
+    i
+      font-size: 48px
+      color: $c_accent-2
+  &__descr
+    padding-left: 20px
+  &__title
+    margin-bottom: 10px
+
+//tabs-products
+.tabs-products
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  &__title
+    text-align: center
+    margin-bottom: 20px
+  &__nav
+    flex-shrink: 0
+    width: calc(100% + 10px)
+    margin: 0 -5px
+    display: flex
+    flex-wrap: wrap
+    &-item
+      position: relative
+      display: flex
+      align-items: center
+      // border: 1px solid $c_accent-2
+      margin: 0 5px 5px
+      cursor: pointer
+      // transition: $trans/2
+      img
+        width: 48px
+        height: 48px
+        object-fit: cover
+        object-position: center
+      p
+        padding: 5px 10px
+        font-size: 18px
+      &.isActive
+        background: $c_accent-2
+        pointer-events: none
+        color: white
+      // &:hover
+      //   background: $c_accent-2
+  &__content
+    display: inline-flex
+    flex-direction: column
+    padding: 10px 0
+    &-wrap
+      flex-grow: 1
+      overflow-y: scroll
+      -webkit-overflow-scrolling: touch
+      padding-bottom: 20px
+    &-item
+      display: inline-flex
+      align-items: center
+      padding: 5px 0
+      border-bottom: 1px solid rgba(grey, 0.3)
+      &:last-child
+        border-bottom: none
+  &__tags
+    padding: 0 0 0 10px
+
+//tags
+.tags
+  display: flex
+  flex-wrap: wrap
+  &__el
+    padding: 3px 5px
+    // border: 1px solid #FFC300
+    background: #FFC300
+    margin: 5px
+
+//news
+.news
+  &__list
+    padding: 10px 0
+    &-item
+      display: flex
+      flex-direction: column
+      padding: 10px
+      border-bottom: 1px solid $c_accent
+      &:first-child
+        border-top: 1px solid $c_accent
+      &--top
+        background: rgba($c_accent, 1)
+        // .news__link:hover
+        //   color: $c_white
+  &__text
+    padding: 5px 0
+  &__link
+    display: inline-flex
+    align-items: center
+    margin-left: auto
+    transition: $trans
+    i
+      margin-right: 5px
+      font-size: 18px
+    // &:hover
+    //   color: $c_accent
+  &__date
+    opacity: 0.6
+
+//about
+.about
+  max-width: 100%
+  width: 800px
+  margin: 0 auto
+  &__title
+    text-align: center
+    margin-bottom: 20px
+  &__text
+    padding: 0 0 10px
+
+//readmore
+.readMore
+  position: relative
+  height: 300px
+  overflow: hidden
+  &.isReadMore
+    height: unset
+    padding-bottom: 60px
+  &__overlay
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 5px
+    font-size: 16px
+    font-weight: bold
+    text-decoration: underline
+    // background: $c_white
+    background-image: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 100%)
+    cursor: pointer
+  &.isReadMore .readMore__overlay
+    padding: 0
+
+//distance
+.distance
+  max-width: 100%
+  width: 800px
+  margin: 0 auto
+  &__title
+    text-align: center
+    margin-bottom: 20px
+
+//products
+.products
+  max-width: 100%
+  width: 800px
+  margin: 0 auto
+  &__title
+    text-align: center
+    margin-bottom: 20px
+  &__table
+    td
+      border: 1px solid $c_text
+      text-align: center
+      padding: 5px
+      &.top
+        background: $c_accent
+      &.subtop
+        background: rgba($c_accent-2, 0.3)
+    thead
+      td
+        font-weight: bold
+
+//requisites
+.requisites
+  max-width: 100%
+  width: 800px
+  margin: 0 auto
+  &__title,
+  &__subtitle
+    text-align: center
+    margin-bottom: 20px
+  &__block
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+    .row
+      display: flex
+      &:first-child
+        .col
+          border-top: 1px solid $c_grey
+      .col
+        flex-shrink: 0
+        border: 1px solid $c_grey
+        border-top: none
+        padding: 5px 10px
+        &:first-child
+          width: 40%
+          border-right-color: transparent
+        &:nth-child(2)
+          width: 60%
+    .link
+      transition: color $trans
+      // &:hover
+      //   color: $c_accent
+
+//contacts-block
+.contacts-block
+  &__title
+    text-align: center
+    margin-bottom: 20px
+  &__subtitle
+    margin-bottom: 10px
+  &__text
+    margin-bottom: 5px
+    b
+      display: flex
+      margin-bottom: 5px
+  .link
+    transition: color $trans
+    // &:hover
+    //   color: $c_accent
+  &__layout
+    display: flex
+  &__el
+    margin-bottom: 20px
+  &__map
+    width: 55%
+    #map
+      width: 100%
+      height: calc(100% - 120px)
+      background: $c_accent
+  &__descr
+    width: 45%
+    padding: 0 40px
+
+//footer
+.footer
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+  flex-wrap: wrap
+  &__el
+    padding: 10px 0
+    &--bottom
+      display: flex
+      justify-content: center
+      width: 100%
+      padding-top: 0
+      opacity: 0.6
+
+//humberger mobile
+.hb-menu
+  cursor: pointer
+  i
+    font-size: 40px
+    color: #06c258
+    &.open
+      z-index: 1
+      opacity: 1
+      position: relative
+    &.close
+      opacity: 0
+      z-index: -1
+      position: absolute
+  &.isOpen
+    .open
+      opacity: 0
+      z-index: -1
+      position: absolute
+    .close
+      z-index: 1
+      opacity: 1
+      position: relative
+
+
+
+
+//arrow-top
+.arrow-top
+  position: relative
+  width: 40px
+  height: 40px
+  background: rgba(white, 0.6)
+  border: 2px solid $c_accent
+  border-radius: 50%
+  margin-left: auto
+  margin-right: 30px
+  transition: 0.3s
+  cursor: pointer
+  z-index: 21
+  &__wrap
+    position: fixed
+    max-width: 100%
+    width: 1440px
+    margin: 0 auto
+    bottom: 20px
+
+  // &:hover
+  //   background-color: $c_accent
+
+  // &:hover .arrow-top__help
+  //   border-left-color: #fff
+  //   border-top-color: #fff
+
+  &__help
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 15px
+    height: 15px
+    background-color: transparent
+    border: 3px solid $c_accent
+    border-right-color: transparent
+    border-bottom-color: transparent
+    transform: translate(-50%, -30%) rotate(45deg)
+    transition: 0.3s
+
+@import "base/_media"

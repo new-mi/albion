@@ -1,0 +1,329 @@
+@media (min-width: 992px)
+  //header
+  .header
+    &__el
+      &--hb
+        display: none
+  
+  //contact
+  .contacts__link a
+    transition: color $trans
+    &:hover
+      color: $c_accent
+
+  // navbar
+  .navbar
+    &__el
+      &:hover
+        background: $c_accent
+  //price-list
+  .price-list
+    &__link
+      &:hover
+        color: $c_accent
+  //tabs-products
+  .tabs-products
+    &__nav
+      &-item
+        &:hover
+          background: $c_accent-2
+          color: $c_white
+  //news
+  .news
+    &__list
+      &-item
+        &--top
+          .news__link:hover
+            color: $c_white
+    &__link
+      &:hover
+        color: $c_accent
+  //requisites
+  .requisites
+    &__block
+      .link
+        &:hover
+          color: $c_accent
+  //contacts-block
+  .contacts-block
+    .link
+      &:hover
+        color: $c_accent
+  //arrow-top
+  .arrow-top
+    &:hover
+      background-color: $c_accent
+    &:hover .arrow-top__help
+      border-left-color: #fff
+      border-top-color: #fff
+
+@media (max-width: 992px)
+  //FONTS
+  .f--h1
+    font-size: 30px
+  .f--h2
+    font-size: 20px
+  .f--h3
+    font-size: 18px
+  .f--h4
+    font-size: 16px
+  .f--text--s
+    font-size: 12px
+  .f--text
+    font-size: 14px
+  .f--text--l
+    font-size: 16px
+
+  //section
+  .section
+    padding: 20px 0
+    &--first
+      padding-top: 0
+
+  //page
+  .page
+    &__content
+      margin-top: 113px
+
+  //header
+  .header
+    // display: none
+    align-items: center
+    &__el
+      &--contacts
+        position: fixed
+        top: 113px
+        left: 0
+        width: 100%
+        // height: calc(100% - 113px)
+        background: $c_white
+        display: none
+        border-bottom: 1px solid rgba($c_grey, 0.3)
+        &.isOpen
+          display: block
+      &--menu
+        width: calc(100% + 20px)
+        margin: 0 -10px
+        border-top-color: rgba($c_grey, 0.5) 
+        border-bottom-color: rgba($c_grey, 0.5) 
+        // box-shadow: 0 1px 1px 1px rgba(black, 0.1)
+      &--logo
+        order: -1
+      &--hb
+        display: flex
+        margin: 0 0 0 auto
+
+  .contacts
+    flex-wrap: wrap
+    &__title
+      font-size: 16px
+    p
+      font-size: 16px
+    br
+      display: none
+    &__el
+      width: 50%
+      padding: 20px
+      &--adr
+        max-width: unset
+
+  //logo
+  .logo
+    width: 80px
+
+  //navbar
+  .navbar
+    flex-wrap: nowrap
+    overflow-x: scroll
+    &__el
+      flex-shrink: 0
+      padding: 5px 10px
+
+
+  //block
+  .block
+    &--main
+      flex-wrap: wrap
+      .block__el
+        &--content-price
+          width: 100%
+        &--content-special
+          width: 40%
+        &--slider
+          width: 60%
+
+  //price-list
+  .price-list
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-start
+    padding: 10px 0
+    &__link
+      width: 33%
+      padding: 5px 10px
+
+  //contacts-block
+  .contacts-block
+    &__layout
+      flex-wrap: wrap
+    &__map,
+    &__descr
+      width: 100%
+      padding: 0
+    &__map
+      order: 1
+      #map
+        height: 300px
+    &__descr
+      display: flex
+      flex-direction: row-reverse
+      .contacts-block__el
+        width: 50%
+        padding: 0 20px
+        &:nth-child(2)
+          padding-left: 0
+
+  //arrow-top
+  .arrow-top
+    margin-right: 0
+    &__wrap
+      width: unset
+      right: 10px
+
+@media (max-width: 768px)
+  //contacts
+  .contacts
+    &__el
+      padding: 10px
+      &--adr
+        max-width: unset
+
+  //block
+  .block
+    &--main
+      .block__el
+        &--content-price,
+        &--content-special,
+        &--slider
+          // width: 100%
+          width: calc(100% + 20px)
+          margin: 0 -10px
+          
+    &--main-second
+      flex-wrap: wrap
+      .block__el
+        &--advantages,
+        &--products
+          width: 100%
+          padding: 0
+
+        &--advantages
+          margin-bottom: 30px
+
+  //main-slider
+  .main-slider
+    &__el
+      height: 300px
+    &__box
+      padding: 10px
+      p
+        font-size: 16px
+
+  //price-list
+  .price-list
+    &__link
+      width: 100%
+
+  //news
+  .news
+    &__title
+      text-align: center
+      margin-bottom: 20px
+
+  //tabs-products
+  .tabs-products
+    &__nav-item
+      p
+        font-size: 16px
+    &__content
+      display: flex
+    &__content-item
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      p
+        margin-bottom: 5px
+    &__tags
+      width: calc(100% + 10px)
+      margin: 0 -5px
+      padding-left: 0
+
+  //products
+  .products
+    &__table-wrap
+      overflow-x: scroll
+      -webkit-overflow-scrolling: touch
+    &__table
+      width: 500px
+      margin: 0 auto
+
+  // requisites__subtitle
+  .requisites
+    &__subtitle
+      text-decoration: underline
+      text-align: left
+    &__block
+      .row
+        flex-wrap: wrap
+        padding: 5px 0
+        .col
+          width: 100% !important
+          border: none !important
+          padding: 0
+          &:first-child
+            font-weight: bold
+
+  //contacts-block
+  .contacts-block
+    &__subtitle
+      text-decoration: underline
+    &__text
+      margin: 0
+      padding: 5px 0
+      b
+        margin: 0
+    &__map
+      #map
+        width: calc(100% + 20px)
+        margin: 0 -10px
+    &__descr
+      flex-wrap: wrap
+      flex-direction: row
+      .contacts-block__el
+        width: 100%
+        padding: 0
+        &:first-child
+          order: 1
+
+  //readMore
+  .readMore
+    position: unset
+    &__overlay
+      font-size: 14px
+
+@media (max-width: 480px)
+  //header
+  .header
+    &__el
+      &--contacts
+        position: fixed
+        top: 113px
+        left: 0
+        width: 100%
+        height: calc(100% - 113px)
+        background: $c_white
+  //contacts
+  .contacts
+    &__el
+      width: 100%
+      padding: 20px
