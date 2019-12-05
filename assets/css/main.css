@@ -242,7 +242,7 @@ a {
   -webkit-box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.07); }
   .header__el--logo {
-    margin: 0 10px 0 0; }
+    margin: 0 10px 0 10px; }
   .header__el--menu {
     width: 100%;
     border-top: 1px solid rgba(128, 128, 128, 0.1); }
