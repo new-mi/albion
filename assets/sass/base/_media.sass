@@ -64,7 +64,7 @@
   .f--h2
     font-size: 20px
   .f--h3
-    font-size: 18px
+    font-size: 20px
   .f--h4
     font-size: 16px
   .f--text--s
@@ -87,6 +87,9 @@
 
   //header
   .header
+    width: calc(100% + 20px)
+    margin: 0 -10px
+    padding: 10px 10px 0 10px
     // display: none
     align-items: center
     &__el
@@ -104,8 +107,8 @@
       &--menu
         width: calc(100% + 20px)
         margin: 0 -10px
-        border-top-color: rgba($c_grey, 0.5) 
-        border-bottom-color: rgba($c_grey, 0.5) 
+        // border-top-color: rgba($c_grey, 0.5) 
+        // border-bottom-color: rgba($c_grey, 0.5) 
         // box-shadow: 0 1px 1px 1px rgba(black, 0.1)
       &--logo
         order: -1
@@ -243,8 +246,9 @@
   //tabs-products
   .tabs-products
     &__nav-item
+      width: calc(50% - 10px)
       p
-        font-size: 16px
+        font-size: 14px
     &__content
       display: flex
     &__content-item
