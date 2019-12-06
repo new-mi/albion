@@ -36,7 +36,7 @@ $(document).ready(function () {
 
 
   // --- read more
-  $('.readMore__overlay').on('click', handlerClickReadMore)
+  $('.readMore__btn').on('click', handlerClickReadMore)
 
   function handlerClickReadMore(e) {
     const parent = this.closest('.readMore');

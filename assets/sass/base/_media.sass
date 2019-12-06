@@ -76,7 +76,7 @@
 
   //section
   .section
-    padding: 20px 0
+    padding: 40px 0
     &--first
       padding-top: 0
 
@@ -240,6 +240,9 @@
   .price-list
     &__link
       width: 100%
+      padding: 10px
+    i
+      line-height: 0.6
 
   //news
   .news
@@ -268,7 +271,7 @@
 
   //products
   .products
-    &__table-wrap
+    .readMore__container
       overflow-x: scroll
       -webkit-overflow-scrolling: touch
     &__table
@@ -295,6 +298,7 @@
           width: 100% !important
           border: none !important
           padding: 0
+          background: transparent
           &:first-child
             font-weight: bold
             margin-bottom: 5px
@@ -323,8 +327,8 @@
 
   //readMore
   .readMore
-    position: unset
-    &__overlay
+    // position: unset
+    &__btn
       font-size: 14px
 
 @media (max-width: 480px)
